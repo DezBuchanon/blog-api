@@ -40,9 +40,9 @@ describe("Blog Posts", function() {
 
   it("should add a blog post on POST", function() {
     const newPost = {
-      title: "Lorem ip some",
-      content: "foo foo foo foo",
-      author: "Emma Goldman"
+      title: "Intertransmissional Mission in Missionary",
+      content: "Jargon",
+      author: "Joe Rogan"
     };
     const expectedKeys = ["id", "publishDate"].concat(Object.keys(newPost));
 
@@ -80,8 +80,8 @@ describe("Blog Posts", function() {
         .get("/blog-posts")
         .then(function(res) {
           const updatedPost = Object.assign(res.body[0], {
-            title: "connect the dots",
-            content: "la la la la la"
+            title: "The Ha Ha Expeeriment",
+            content: "Bad One Liners"
           });
           return chai
             .request(app)
